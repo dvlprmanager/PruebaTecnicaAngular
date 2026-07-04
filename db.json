@@ -1,0 +1,35 @@
+{
+  "quotations": [
+    {
+      "customerName": "William Carrillo",
+      "requestedAmount": 50000,
+      "interestRate": 20,
+      "termMonths": 36,
+      "monthlyPayment": 1858.1791679870275,
+      "createdAt": "2026-07-04T01:55:03.351Z",
+      "status": 0,
+      "id": "f2W1FA-vDzc"
+    },
+    {
+      "customerName": "William Carrillo",
+      "requestedAmount": 100,
+      "interestRate": 10,
+      "termMonths": 32,
+      "monthlyPayment": 3.573089634662395,
+      "createdAt": "2026-07-04T02:12:45.277Z",
+      "status": 1,
+      "id": "pm0ECC_Qzis"
+    },
+    {
+      "customerName": "Nuevo Cliente",
+      "requestedAmount": 20000,
+      "interestRate": 20,
+      "termMonths": 12,
+      "monthlyPayment": 1852.6901179416063,
+      "createdAt": "2026-07-04T02:29:58.718Z",
+      "status": 1,
+      "id": "XI57qzMGexw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

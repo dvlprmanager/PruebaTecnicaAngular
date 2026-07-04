@@ -1,0 +1,43 @@
+.detail-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+mat-card-content {
+  padding-top: 24px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+}
+
+dt {
+  margin-bottom: 4px;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+dd {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.monthly-payment dd {
+  color: var(--mat-sys-primary);
+  font-size: 1.5rem;
+}
+
+.not-found {
+  padding: 32px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  dl {
+    grid-template-columns: 1fr;
+  }
+}

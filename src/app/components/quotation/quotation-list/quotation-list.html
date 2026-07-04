@@ -1,0 +1,28 @@
+<main class="list-page">
+  <header>
+    <app-section-header
+      title="Cotizaciones"
+      description="Consulta las cotizaciones de préstamos registradas."
+    />
+
+    <a mat-flat-button routerLink="/nueva-cotizacion">Nueva cotización</a>
+  </header>
+
+  @if (quotations().length > 0) {
+    <app-data-table
+      [columns]="columns"
+      [data]="quotations()"
+      [showActions]="true"
+      (viewRow)="view($event)"
+      (deleteRow)="deactivate($event.id)"
+    />
+  } @else {
+    <mat-card class="empty-state">
+      <mat-card-content>
+        <h2>No hay cotizaciones</h2>
+        <p>Registra la primera cotización para verla en este listado.</p>
+      </mat-card-content>
+    </mat-card>
+  }
+
+</main>

@@ -1,0 +1,9 @@
+h1,
+p {
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 0;
+  color: var(--mat-sys-on-surface-variant);
+}

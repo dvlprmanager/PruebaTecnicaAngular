@@ -1,0 +1,68 @@
+<main class="detail-page">
+  @if (quotation(); as currentQuotation) {
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Detalle de cotización</mat-card-title>
+        <mat-card-subtitle>
+          Cotización de {{ currentQuotation.customerName }}
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <dl>
+          <div>
+            <dt>Nombre del cliente</dt>
+            <dd>{{ currentQuotation.customerName }}</dd>
+          </div>
+
+          <div>
+            <dt>Monto solicitado</dt>
+            <dd>
+              {{
+                currentQuotation.requestedAmount
+                  | currency: 'GTQ' : 'symbol-narrow'
+              }}
+            </dd>
+          </div>
+
+          <div>
+            <dt>Tasa de interés</dt>
+            <dd>{{ currentQuotation.interestRate }}%</dd>
+          </div>
+
+          <div>
+            <dt>Plazo</dt>
+            <dd>{{ currentQuotation.termMonths }} meses</dd>
+          </div>
+
+          <div class="monthly-payment">
+            <dt>Cuota mensual</dt>
+            <dd>
+              {{
+                currentQuotation.monthlyPayment
+                  | currency: 'GTQ' : 'symbol-narrow'
+              }}
+            </dd>
+          </div>
+
+          <div>
+            <dt>Fecha de creación</dt>
+            <dd>{{ currentQuotation.createdAt | date: 'dd/MM/yyyy HH:mm' }}</dd>
+          </div>
+        </dl>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <a mat-button routerLink="/cotizaciones">Volver al listado</a>
+      </mat-card-actions>
+    </mat-card>
+  } @else if (loaded()) {
+    <mat-card class="not-found">
+      <mat-card-content>
+        <h1>Cotización no encontrada</h1>
+        <p>El registro solicitado no existe.</p>
+        <a mat-flat-button routerLink="/cotizaciones">Volver al listado</a>
+      </mat-card-content>
+    </mat-card>
+  }
+</main>

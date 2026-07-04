@@ -1,0 +1,43 @@
+.form-page {
+  display: grid;
+  gap: 24px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+.payment-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--mat-sys-surface-container);
+}
+
+.payment-summary strong {
+  font-size: 1.5rem;
+  color: var(--mat-sys-primary);
+}
+
+button {
+  justify-self: end;
+}
+
+@media (max-width: 480px) {
+  .payment-summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  button {
+    justify-self: stretch;
+  }
+}
